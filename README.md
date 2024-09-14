@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Deployment link of the app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ [Deployment link](https://simplyfy-ai-pearl.vercel.app/).
 
 ## Available Scripts
 
