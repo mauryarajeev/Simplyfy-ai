@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom'; // Import Outlet for rendering nested routes
+import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar'; 
 import Header from './Header'; 
 
@@ -11,6 +11,7 @@ const Layout: React.FC = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   }
+
   return (
     <div className="flex flex-col h-screen">
       {/* Header section */}
@@ -22,8 +23,7 @@ const Layout: React.FC = () => {
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar section (hidden on mobile) */}
         {isSidebarOpen && (
-          <aside className="w-full md:w-64 hidden md:block bg-gray-800 overflow-y-auto">
-            {/* Sidebar is scrollable when content overflows */}
+          <aside className="w-full h-screen md:w-64  md:block bg-gray-800 overflow-y-auto">
             <Sidebar />
           </aside>
         )}
