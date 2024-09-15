@@ -42,7 +42,7 @@ const data: CountryData[] = [
 
 const SalesByCountry: React.FC = () => {
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md m-5">
+    <div className="p-6 bg-white rounded-lg shadow-md">
       {/* Header Section */}
       <div className="flex items-center mb-6">
         <div className="p-3 bg-green-500 text-white rounded-full">
@@ -54,9 +54,9 @@ const SalesByCountry: React.FC = () => {
       {/* Main Content */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Sales Data Section */}
-        <div className="w-full">
+        <div className="w-full overflow-x-auto">
           {/* Table Header */}
-          <div className="grid grid-cols-5 items-center border-b border-gray-400 py-2 font-bold">
+          <div className="hidden sm:grid grid-cols-5 items-center border-b border-gray-400 py-2 font-bold">
             <div className="text-center">Flag</div>
             <div className="text-left">Country</div>
             <div className="text-right">Sales</div>
@@ -69,7 +69,7 @@ const SalesByCountry: React.FC = () => {
             {data.map((item, index) => (
               <div
                 key={index}
-                className="grid grid-cols-5 items-center border-b border-gray-300 py-4"
+                className="grid grid-cols-2 sm:grid-cols-5 items-center border-b border-gray-300 py-4"
               >
                 {/* Flag */}
                 <div className="text-center text-2xl">{item.flag}</div>
@@ -78,13 +78,13 @@ const SalesByCountry: React.FC = () => {
                 <div className="text-left font-bold">{item.country}</div>
 
                 {/* Sales */}
-                <div className="text-right">{item.sales}</div>
+                <div className="hidden sm:block text-right">{item.sales}</div>
 
                 {/* Value */}
-                <div className="text-right font-bold">{item.value}</div>
+                <div className="hidden sm:block text-right font-bold">{item.value}</div>
 
                 {/* Bounce */}
-                <div className="text-right">{item.bounce}</div>
+                <div className="hidden sm:block text-right">{item.bounce}</div>
               </div>
             ))}
           </div>
