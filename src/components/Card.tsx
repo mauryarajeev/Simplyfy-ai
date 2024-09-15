@@ -17,20 +17,20 @@ const Card: React.FC<CardProps> = ({
   location,
 }) => {
   return (
-    <div className="bg-white rounded-lg m-3 shadow-lg overflow-hidden w-full sm:w-80 md:w-96 relative mx-auto">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full sm:w-64 md:w-80 relative mx-auto my-4">
       {/* Image Section */}
-      <img src={image} alt={title} className="w-full h-48 sm:h-56 object-cover" />
+      <img src={image} alt={title} className="w-full h-40 sm:h-48 object-cover" />
 
       {/* Card Content */}
-      <div className="p-4 sm:p-6">
-        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">{title}</h2>
-        <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-8">{description}</p>
+      <div className="p-4 sm:p-5">
+        <h2 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{title}</h2>
+        <p className="text-gray-600 text-sm sm:text-sm mb-4 sm:mb-6">{description}</p>
 
         {/* Separator */}
         <hr className="border-t border-gray-300 mb-3 sm:mb-4" />
 
         <div className="flex justify-between items-center">
-          <p className="text-lg font-bold">{price}/night</p>
+          <p className="text-md font-bold">{price}/night</p>
           <div className="flex items-center text-gray-500">
             <FaMapMarkerAlt className="mr-1" />
             <span>{location}</span>
