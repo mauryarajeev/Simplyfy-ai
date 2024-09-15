@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom'; // Import Outlet for rendering nested routes
 import Sidebar from './Sidebar'; 
 import Header from './Header'; 
-import Footer from "./Footer";
+
 
 const Layout: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -22,8 +22,7 @@ const Layout: React.FC = () => {
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar section (hidden on mobile) */}
         {isSidebarOpen && (
-          <aside className="w-full md:w-64 hidden md:block bg-gray-800 overflow-y-auto"
-            style={{ maxHeight: 'calc(100vh - 4rem)' }}>
+          <aside className="w-full md:w-64 hidden md:block bg-gray-800 overflow-y-auto">
             {/* Sidebar is scrollable when content overflows */}
             <Sidebar />
           </aside>
@@ -34,9 +33,6 @@ const Layout: React.FC = () => {
           <Outlet /> {/* Render nested routes here */}
         </main>
       </div>
-      <footer>
-        <Footer/>
-      </footer>
     </div>
   );
 };
