@@ -22,14 +22,14 @@ const lineChartData = {
       data: [150, 300, 250, 350, 400],
       borderColor: '#34D399',
       backgroundColor: 'rgba(52, 211, 153, 0.2)',
-      tension: 0,  // No curve, creating zig-zag lines
+      tension: 0, // No curve, creating zig-zag lines
     },
   ],
 };
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="flex flex-wrap justify-between mt-8"> 
+    <div className="grid grid-cols-1 gap-6 lg:flex lg:justify-between lg:space-x-6 mt-8">
       {/* Website Views Card with Bar Chart */}
       <Card
         title="Website Views"
