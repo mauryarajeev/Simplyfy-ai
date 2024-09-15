@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom'; // Import Outlet for rendering nested routes
-import Sidebar from './Sidebar'; // Import Sidebar component
-import Header from './Header'; // Import Header component
+import Sidebar from './Sidebar'; 
+import Header from './Header'; 
+import Footer from "./Footer";
 
 const Layout: React.FC = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Function to toggle sidebar visibility
   const toggleSidebar = () => {
@@ -33,6 +34,9 @@ const Layout: React.FC = () => {
           <Outlet /> {/* Render nested routes here */}
         </main>
       </div>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 };
