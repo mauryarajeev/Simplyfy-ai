@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({
   location,
 }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96 relative mx-auto">
+    <div className="bg-white rounded-lg m-3 shadow-lg overflow-hidden w-full sm:w-80 md:w-96 relative mx-auto">
       {/* Image Section */}
       <img src={image} alt={title} className="w-full h-48 sm:h-56 object-cover" />
 
