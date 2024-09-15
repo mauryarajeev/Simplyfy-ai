@@ -5,7 +5,7 @@ import Header from './Header';
 
 
 const Layout: React.FC = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   // Function to toggle sidebar visibility
   const toggleSidebar = () => {
