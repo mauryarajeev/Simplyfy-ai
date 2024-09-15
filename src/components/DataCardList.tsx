@@ -4,7 +4,7 @@ import { FaCouch, FaChartBar, FaStore, FaUserPlus } from 'react-icons/fa';
 
 const DataCardList: React.FC = () => {
   return (
-    <div className="flex justify-between items-center space-x-4 p-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
       <DataCard
         icon={<FaCouch size={24} color="white" />}
         title="Bookings"
