@@ -34,9 +34,9 @@ interface CardProps {
 
 const ChartCard: React.FC<CardProps> = ({ title, subtitle, time, chartType, chartData }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-5 m-5 w-1/3.1">  
+    <div className="bg-white shadow-lg rounded-lg p-5 m-2 w-full sm:w-1/2 lg:w-1/3">  
       {/* Chart Section */}
-      <div className="h-48 mb-4">  
+      <div className="h-48 sm:h-64 lg:h-72 mb-4">  
         {chartType === 'bar' ? (
           <Bar data={chartData} options={{ maintainAspectRatio: false }} />
         ) : (
