@@ -19,7 +19,7 @@ const Dashboard: React.FC = () => {
       <div className="w-full  p-4 border border-gray-200 rounded-lg shadow-md">
         <CardList />
       </div>
-       <div className="w-full  p-4 border border-gray-200 rounded-lg shadow-md">
+       <div className="w-full gap-0 p-0 border-gray-200 rounded-lg shadow-md">
         <Footer />
       </div>
     </div>
